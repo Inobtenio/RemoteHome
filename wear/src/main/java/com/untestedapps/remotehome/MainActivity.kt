@@ -3,6 +3,7 @@ package com.untestedapps.remotehome
 import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
 import com.github.kittinunf.fuel.core.Response
+import com.untestedapps.common.APIRequest
 import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 

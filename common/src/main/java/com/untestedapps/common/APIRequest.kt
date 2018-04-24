@@ -6,7 +6,7 @@ import com.github.kittinunf.fuel.core.FuelManager
 import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.Request
 import com.github.kittinunf.fuel.core.Response
-import java.util.*
+import java.util.HashMap
 
 /**
  * Created by kevin on 4/23/18.
@@ -30,12 +30,12 @@ class APIRequest {
             return action?.invoke(method, path)!!
         }
 
-        private fun performLocally(method: String, path: String): Response{
+        private fun performLocally(method: String, path: String): Response {
             val full_path = "$localApiHost/$path"
             return FuelManager().request(Method.valueOf(method), full_path).response().second
         }
 
-        private fun performOnPhone(method: String, path: String): Response{
+        private fun performOnPhone(method: String, path: String): Response {
             // Code to perform the actual call on the phone
             return Response()
         }

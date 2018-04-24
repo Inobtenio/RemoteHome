@@ -2,6 +2,7 @@ package com.untestedapps.remotehome
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.untestedapps.common.APIRequest
 import com.github.kittinunf.fuel.core.Response
 import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
