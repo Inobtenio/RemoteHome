@@ -36,3 +36,8 @@ dependencies {
     compile 'com.github.kittinunf.fuel:fuel-android:1.4.0'
     implementation "org.jetbrains.anko:anko:$anko_version"
 }
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}

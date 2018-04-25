@@ -1,1 +1,3 @@
+common/src/main/res/raw/remote_certificate.pem
 common/src/main/res/values/secrets.xml
+common/src/main/res/raw/local_certificate.pem

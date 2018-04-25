@@ -14,12 +14,11 @@ class MainActivity : WearableActivity() {
         setContentView(R.layout.activity_main)
 
         setAmbientEnabled() // Enables Always-on
-        APIRequest.setup(applicationContext)
 
         relativeLayout{
-            val toggle_button = button("Toggle")
+            val toggleButton = button("Toggle")
 
-            toggle_button.onClick {
+            toggleButton.onClick {
                 callService()
             }
         }
@@ -29,7 +28,7 @@ class MainActivity : WearableActivity() {
 
     private fun callService(){
         doAsync {
-            val response = APIRequest.call("POST", getString(R.string.toggle_lights))
+            val response = ConnectionSystemManager().call(applicationContext, getString(R.string.toggle_lights), "POST")
             uiThread {
                 showResponse(response)
             }

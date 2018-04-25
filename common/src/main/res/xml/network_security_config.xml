@@ -3,7 +3,7 @@
     <domain-config>
         <domain includeSubdomains="true">181.224.239.164</domain>
         <trust-anchors>
-            <certificates src="@raw/certificate"/>
+            <certificates src="@raw/remote_certificate"/>
         </trust-anchors>
     </domain-config>
 </network-security-config>

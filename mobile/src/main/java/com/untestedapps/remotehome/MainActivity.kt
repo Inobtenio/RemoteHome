@@ -13,12 +13,10 @@ class MainActivity : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        APIRequest.setup(applicationContext)
-
         relativeLayout{
-            val toggle_button = button("Toggle")
+            val toggleButton = button("Toggle")
 
-            toggle_button.onClick {
+            toggleButton.onClick {
                 callService()
             }
         }
@@ -28,7 +26,7 @@ class MainActivity : AppCompatActivity()  {
 
     private fun callService(){
         doAsync {
-            val response = APIRequest.call("POST", getString(R.string.toggle_lights))
+            val response = ConnectionSystemManager().call(applicationContext, getString(R.string.toggle_lights), "POST")
             uiThread {
                 showResponse(response)
             }
@@ -36,6 +34,11 @@ class MainActivity : AppCompatActivity()  {
     }
 
     private fun showResponse(response: Response){
-        toast(response.httpStatusCode.toString())
+        val message = if (response.httpStatusCode != 200){
+            response.toString()
+        } else {
+            response.httpStatusCode.toString()
+        }
+        toast(message)
     }
 }

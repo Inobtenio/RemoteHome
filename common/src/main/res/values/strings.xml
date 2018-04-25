@@ -3,4 +3,7 @@
     <string name="localhost">http://192.168.1.126:8123</string>
     <string name="remotehost">https://181.224.239.164:6040</string>
     <string name="toggle_lights">api/services/light/toggle</string>
+    <string name="home_main_ssid">Martin</string>
+    <string name="home_secondary_ssid">raspi</string>
+    <string name="home_pi_ssid">raspi</string>
 </resources>
